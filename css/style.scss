@@ -1,0 +1,968 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+body{
+    a{
+        text-decoration: none;  
+    }
+}
+@font-face {
+    font-family: Pacifico;
+    src: url(../fonts/Pacifico-Regular.ttf) format(truetype);
+}
+@font-face {
+    font-family: Roboto Slab;
+    src: url(../fonts/RobotoSlab-Regular.ttf) format(truetype);
+}
+$special-font: 'Pacifico', cursive;
+$main-font: 'Roboto Slab', serif;
+$darkblue: #27374D;
+$lightblue: #526D82;
+$steel: #9db2bf;
+$pale: #dde6ed;
+$fury: #f5441e;
+$ink: #26282a;
+$pitch: #191c20;
+
+@mixin image($url){
+    background-image: url($url);
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+@mixin flex-hv($hor, $ver){
+    display: flex;
+    justify-content: $hor;
+    align-items: $ver;
+}
+@mixin font-style($size, $trans, $color){
+    font-size: $size;
+    text-transform: $trans;
+    font-family: $main-font;
+    color: $color;
+}
+//Header <--------------------
+#header{
+    width: 100%;
+    background-color: $darkblue;
+    .logo{
+        width: 100%;
+        height: 300px;
+        @include image('../images/banner.jpg');
+        @include flex-hv(center, center);
+        flex-direction: column;
+        h1{
+            font-family: $special-font;
+            font-size: 60px;
+            text-shadow: 2px 2px 10px $ink;
+        }
+        a{
+            color: $pale;
+            transition-duration: 0.2s;
+            &:hover{color: $fury};
+        }
+        p{
+            padding-top: 10px;
+            @include font-style(20px, uppercase, $pale);
+            text-shadow: 2px 2px 10px $ink;
+        }
+    }
+    .nav{
+        width: 100%;
+        ul{
+            @include flex-hv(center, center);
+            padding: 10px 0px;
+        }
+        li{
+            list-style-type: none;
+            padding: 0px 20px;
+            border-right: 2px solid $lightblue;
+            &:last-child{border-right: none};
+        }
+        a{
+            @include font-style(20px, uppercase, $pale);
+            text-shadow: 1px 1px 5px $ink;
+        }
+
+    }
+}
+//About <--------------------
+#about{
+    background-color: $lightblue;
+    h1{
+        @include font-style(28px, none, $fury);
+        text-align: center;
+        font-family: $special-font;
+        text-shadow: 2px 2px 10px $ink;
+    }
+    .about-container{
+        width: 100%;
+        @include flex-hv(space-evenly, center);
+        .me{
+            width: 35%;
+            @include flex-hv(center, center);
+            .me-picture{
+                width: 360px;
+                height: 360px;
+                border-radius: 20px;
+                box-shadow: 2px 4px 10px $ink;
+                @include image('../images/me.jpg');
+            }
+        }
+        .about-me{
+            width: 35%;
+            background-color: $pale;
+            padding: 0px 10px 10px 10px;
+            box-shadow: 2px 4px 10px $ink;
+            border-radius: 20px;
+        }
+    }
+    .desc{
+        padding: 15px 0px;
+    }
+    .skills-container{
+        @include flex-hv(space-between, center);
+        .skill{
+            width: 20%;
+            .skill-desc{
+                width: 100%;
+                padding: 0px 10px 10px 10px;
+                height: 130px;
+                @include flex-hv(center, center);
+                span{
+                    font-weight: bold;
+                }
+            }
+            .html, .css, .sass, .bootstrap{
+                width: 64px;
+                height: 64px;
+            }
+            .html{
+                @include image('../images/icons/html.png');
+            }
+            .css{
+                @include image('../images/icons/css.png');
+            }
+            .sass{
+                @include image('../images/icons/sass.png');
+            }
+            .bootstrap{
+                @include image('../images/icons/bootstrap.png');
+            }
+        }
+    }
+}
+//Offers <--------------------
+#offers{
+    background-color: $darkblue;
+    h3{
+        @include font-style(20px, uppercase, $ink);
+        text-align: center;
+        padding-bottom: 5px;
+    }
+    .offers-container{
+        @include flex-hv(space-around, center);
+        .offer{
+            width: 25%;
+            .offer-desc{
+                width: 100%;
+                padding: 0px 10px 10px 10px;
+                p{
+                    @include flex-hv(center, center);
+                    height: 200px;
+                }
+            }
+            .responsive, .maintenance, .optimization{
+                width: 64px;
+                height: 64px;
+            }
+            .responsive{
+                @include image('../images/icons/responsive.png');
+            }
+            .maintenance{
+                @include image('../images/icons/maintenance.png');
+            }
+            .optimization{
+                @include image('../images/icons/optimization.png');
+            }
+        }
+    }
+}
+//Projects <--------------------
+#projects{
+    background-color: $lightblue;
+    .projects-container{
+        @include flex-hv(space-between, center);
+        width: 100%;
+        .project{
+            @include flex-hv(flex-end, center);
+            flex-direction: column;
+            width: 47.5%;
+            height: 350px;
+            margin-bottom: 10px;
+            border-radius: 20px;
+            box-shadow: 2px 4px 10px $ink;
+            transition: transform 0.2s ease;
+            &:hover{transform: scale(1.02)};
+            .project-visit{
+                width: 85px;
+                height: 35px;
+                background-color: $darkblue;
+                margin-bottom: 10px;
+                border-radius: 10px;
+                box-shadow: 1px 2px 5px $ink;
+                @include flex-hv(center, center);
+                a{
+                    @include font-style(18px, uppercase, $pale);
+                    text-shadow: 1px 1px 5px $ink;
+                }
+            }
+            .project-desc{
+                @include flex-hv(center, center);
+                width: 100%;
+                height: 40px;
+                background-color: rgba(221, 230, 237, 0.5);
+                border-radius: 0px 0px 20px 20px;
+            }
+        }
+    }
+    .fast-rent{
+        @include image('../images/project1.jpg');
+    }
+    .portfolio{
+        @include image('../images/project2.jpg');
+    }
+}
+//Colabs <--------------------
+#colabs{
+    background-color: $darkblue;
+    .colabs-container{
+        width: 100%;
+        @include flex-hv(space-between, center);
+        .companies{
+            width: 47.5%;
+            height: 300px;
+            border-radius: 20px;
+            box-shadow: 2px 4px 10px $ink;
+            background-color: $pale;
+            margin-bottom: 10px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s ease;
+            &:hover{transform: scale(1.02)};
+        }
+        .overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            &:hover{opacity: 1};
+        }
+        .text{
+            @include flex-hv(center, center);
+            width: 65%;
+            height: 170px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(157, 178, 191, 0.85);
+            padding: 10px;
+            z-index: 1;
+            border-radius: 20px;
+        }
+        .carwiz{
+            @include image('../images/colab1.png');
+        }
+        .budget{
+            @include image('../images/colab2.png');
+        } 
+    }
+}
+//Contact <--------------------
+#contact{
+    background-color: $lightblue;
+    .contact-container{
+        @include flex-hv(space-evenly, center);
+        width: 100%;
+        padding-bottom: 10px;
+        .contact-info{
+            width: 40%;
+            @include flex-hv(center, center);
+            flex-direction: column;
+            .contact-class{
+                width: 75%;
+                height: 40px;
+                border-radius: 10px;
+                background-color: $darkblue;
+                box-shadow: 2px 4px 10px $ink;
+                margin: 20px 0px;
+                @include flex-hv(center, center);
+                .contact-icon{
+                    width: 15%;
+                    i{
+                        font-size: 32px;
+                        color: $pale;
+                        @include flex-hv(center, center);
+                    }
+                }
+                .contact-text{
+                    width: 85%;
+                    p, a{
+                        color: $pale;
+                        @include flex-hv(center, center);
+                    }
+                }
+            }
+        }
+        .contact-form{
+            width: 40%;
+            form{
+                @include flex-hv(center, center);
+                flex-direction: column;
+            }
+            textarea{
+                width: 75%;
+                height: 140px;
+                resize: none;
+                padding: 5px;
+            }
+            input[type="text"], input[type="email"]{
+                width: 75%;
+                height: 35px;
+                text-align: center;
+            }
+            input[type="submit"]{
+                width: 20%;
+                height: 35px;
+                margin-bottom: 0px;
+                background-color: $darkblue;
+                @include font-style(16px, uppercase, $pale);
+            }
+            input, textarea{
+                border-radius: 10px;
+                border: 1px solid $darkblue;
+                background-color: $pale;
+                box-shadow: 2px 4px 10px $ink;
+                margin-bottom: 10px;
+                @include font-style(16px, none, $pitch);
+            }
+            label{
+                @include font-style(16px, none, $pitch)
+            }
+        }
+    }
+}
+//Footer <--------------------
+#footer{
+    height: 50px;
+    background-color: $darkblue;
+    @include flex-hv(center, center);
+    .foot{
+        display: flex;
+        width: 50%;
+        span{
+            color: $lightblue;
+        }
+        a{
+            font-size: 40px;
+            color: $pale;
+            transition-duration: 0.2s;
+            &:hover{color: $fury};
+            margin-left: 20px;
+        }
+        a:first-child{
+            margin-left: 0px;
+        }
+        p{
+            @include font-style(20px, uppercase, $pale);
+        }
+    }
+    .foot:last-child{
+        justify-content: flex-end;
+    }
+}
+//Common <--------------------
+#about, #offers, #projects, #colabs, #contact, #footer{
+    width: 100%;
+    padding-left: 12%;
+    padding-right: 12%;
+    h2{
+        @include font-style(30px, uppercase, $pale);
+        text-align: center;
+        text-shadow: 2px 2px 10px $ink;
+        padding-bottom: 5px;
+    }
+    p{
+        text-align: center;
+        @include font-style(16px, none, $pitch);
+    }
+    .skills-container, .offers-container{
+        width: 100%;
+        .skill, .offer{
+            background-color: $pale;
+            border-radius: 20px;
+            box-shadow: 2px 4px 10px $ink;
+            margin-bottom: 10px;
+            .skill-icon{
+                width: 100%;
+                height: 64px;
+                margin: 10px 0px;
+                @include flex-hv(center, center);
+            }
+        }
+    }
+}
+//Responsive <--------------------
+@media screen and (max-width: 1441px){
+    #header{
+        .logo{
+            h1{
+                font-size: 54px;
+            }
+            p{
+                font-size: 18px;
+            }
+        }
+        .nav{
+            a{
+                font-size: 18px;
+            }
+        }
+    }
+    #about, #offers, #projects, #colabs, #contact, #footer{
+        padding-left: 8%;
+        padding-right: 8%;
+        h2{
+            font-size: 27px;
+        }
+        p{
+            font-size: 14.4px;
+        }
+    }
+    #about{
+        h1{
+            font-size: 25.2px;
+        }
+        .about-container{
+            .me{
+                .me-picture{
+                    width: 324px;
+                    height: 324px;
+                }
+            }
+        }
+    }
+    #offers{
+        h3{
+            font-size: 18px;
+        }
+    }
+    #projects{
+        .projects-container{
+            .project{
+                .project-visit{
+                    width: 76.5px;
+                    height: 31.5px;
+                    a{
+                        font-size: 16.2px;
+                    }
+                }
+                .project-desc{
+                    height: 36px;
+                }
+            }
+        }
+    }
+    #contact{
+        .contact-container{
+            .contact-info{
+                .contact-class{
+                    .contact-icon{
+                        i{
+                            font-size: 28.8px;
+                        }
+                    }
+                }
+            }
+            .contact-form{
+                input[type="submit"]{
+                    font-size: 14.4px;
+                }
+                input, textarea{
+                    font-size: 14.4px;
+                }
+                label{
+                    font-size: 14.4px;
+                }
+            }
+        }
+    }
+    #footer{
+        .foot{
+            p{
+                font-size: 18px;
+            }
+            i{
+                font-size: 36px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1180px){
+    #about{
+        .about-container{
+            justify-content: space-around;
+        }
+    }
+    #offers{
+        h3{
+            padding: 0px 35px;
+        }
+    }
+    #projects{
+        .projects-container{
+            flex-direction: column;
+            .project{
+                width: 100%;
+                height: 300px;
+            }
+        }
+    }
+    #colabs{
+        .colabs-container{
+            flex-direction: column;
+            .companies{
+                width: 100%;
+            }
+            .text{
+                height: 130px;
+            }
+        }
+    }
+    #contact{
+        .contact-container{
+            .contact-info{
+                width: 50%;
+                .contact-class{
+                    width: 90%;
+                }
+            }
+            .contact-form{
+                width: 50%;
+                textarea, input[type="text"], input[type="email"]{
+                    width: 90%;
+                }
+                input[type="submit"]{
+                    width: 30%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1025px){
+    #about, #offers, #projects, #colabs, #contact, #footer{
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+    #about{
+        .about-container{
+            .me{
+                .me-picture{
+                    width: 308px;
+                    height: 308px;
+                }
+            }
+        }
+    }
+    #footer{
+        .foot{
+            width: 70%;
+        }
+        .foot:last-child{
+            width: 30%;
+        }
+    }
+}
+@media screen and (max-width: 978px){
+    #about{
+        .skills-container{
+            .skill{
+                .skill-icon{
+                    height: 56px;
+                    margin: 5px 0px;
+                }
+                .html, .css, .sass, .bootstrap{
+                    width: 56px;
+                    height: 56px;
+                }
+                .skill-desc{
+                    height: 150px;
+                    padding: 0px 5px 5px 5px;
+                }
+            }
+        }
+    }
+    #offers{
+        h3{
+            padding: 0px;
+        }
+        .offers-container{
+            flex-direction: column;
+            .offer{
+                width: 100%;
+                .skill-icon{
+                    height: 56px;
+                    margin: 5px 0px;
+                }
+                .responsive, .maintenance, .optimization{
+                    width: 56px;
+                    height: 56px;
+                }
+                .offer-desc{
+                    padding: 0px 5px 5px 5px;
+                    p{
+                        height: 100px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 903px){
+    #about{
+        .about-container{
+            .me{
+                width: 45%;
+                justify-content: flex-start;
+                .me-picture{
+                    width: 276px;
+                    height: 276px;
+                }
+            }
+            .about-me{
+                width: 50%;
+            }
+        }
+        .desc{
+            padding: 7.5px 0px;
+        }
+        .skills-container{
+            .skill{
+                width: 22.5%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 749px){
+    #about, #offers, #projects, #colabs, #contact, #footer{
+        padding-left: 2%;
+        padding-right: 2%;
+        .skills-container{
+            .skill{
+                width: 23%;
+                .skill-desc{
+                    height: 180px;
+                }
+            }
+        }
+    }
+    #about{
+        .about-container{
+            justify-content: space-between;
+        }
+    }
+    #contact{
+        .contact-container{
+            flex-direction: column;
+            .contact-info{
+                width: 75%;
+                .contact-class{
+                    width: 100%;
+                }
+            }
+            .contact-form{
+                width: 75%;
+                textarea, input[type="text"], input[type="email"]{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    #footer{
+        height: 70px;
+        flex-direction: column-reverse;
+        .foot{
+            width: 100%;
+            justify-content: center;
+        }
+        .foot:last-child{
+            justify-content: center;
+            padding-bottom: 5px;
+        }
+    }
+}
+@media screen and (max-width: 636px){
+    #header{
+        .logo{
+            height: 250px;
+            h1{
+                font-size: 48px;
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+        .nav{
+            ul{
+                flex-direction: column;
+                padding: 0px;
+            }
+            li{
+                border: none;
+                padding: 5px 0px;
+            }
+            a{
+                font-size: 16px;
+            }
+        }
+    }
+    #about, #offers, #projects, #colabs, #contact{
+        h2{
+            font-size: 24px;
+        }
+        p{
+            font-size: 12.8px;
+        }
+    }
+    #about{
+        h1{
+            font-size: 22.4px;
+        }
+        .about-container{
+            flex-direction: column;
+            .me{
+                justify-content: center;
+                width: 100%;
+                padding-bottom: 5px;
+                .me-picture{
+                    width: 260px;
+                    height: 260px;
+                }
+            }
+            .about-me{
+                width: 100%;
+            }
+        }
+        .desc{
+            padding: 5px 0px;
+        }
+        .skills-container{
+            flex-wrap: wrap;
+            justify-content: space-around;
+            .skill{
+                width: 45%;
+                .skill-desc{
+                    height: 120px;
+                }
+            }
+        }
+    }
+    #offers{
+        h3{
+            font-size: 16px;
+        }
+    }
+    #projects{
+        .projects-container{
+            .project{
+                height: 250px;
+                .project-visit{
+                    width: 68px;
+                    height: 28px;
+                    a{
+                        font-size: 14.4px;
+                    }
+                }
+                .project-desc{
+                    height: 32px;
+                }
+            }
+        }
+    }
+    #colabs{
+        .colabs-container{
+            .companies{
+                height: 250px;
+            }
+        }
+    }
+    #contact{
+        .contact-container{
+            .contact-info{
+                .contact-class{
+                    height: 35px;
+                    .contact-icon{
+                        i{
+                            font-size: 25.6px;
+                        }
+                    }
+                }
+            }
+            .contact-form{
+                input[type="submit"]{
+                    font-size: 12.8px;
+                }
+                input, textarea{
+                    font-size: 12.8px;
+                }
+                label{
+                    font-size: 12.8px;
+                }
+            }
+        }
+    }
+    #footer{
+        .foot{
+            p{
+                font-size: 16px;
+            }
+            i{
+                font-size: 32px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 481px){
+    #colabs{
+        .colabs-container{
+            .text{
+                width: 85%;
+                height: 150px;
+            }
+        }
+    }
+    #contact{
+        .contact-container{
+            .contact-info{
+                width: 100%;
+                .contact-class{
+                    width: 100%;
+                }
+            }
+            .contact-form{
+                width: 100%;
+                textarea, input[type="text"], input[type="email"]{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 361px){
+    #header{
+        .logo{
+            h1{
+                font-size: 42px;
+            }
+            p{
+                font-size: 15px;
+            }
+        }
+        .nav{
+            a{
+                font-size: 15px;
+            }
+        }
+    }
+    #about, #offers, #projects, #colabs, #contact{
+        h2{
+            font-size: 22.5px;
+        }
+        p{
+            font-size: 12px;
+        }
+    }
+    #about{
+        h1{
+            font-size: 21px;
+        }
+        .skills-container{
+            .skill{
+                .skill-desc{
+                    height: 130px;
+                }
+            }
+        }
+    }
+    #offers{
+        h3{
+            font-size: 15px;
+        }
+    }
+    #projects{
+        .projects-container{
+            .project{
+                height: 215px;
+                .project-visit{
+                    width: 63.75px;
+                    height: 26.25px;
+                    a{
+                        font-size: 13.5px;
+                    }
+                }
+                .project-desc{
+                    height: 30px;
+                }
+            }
+        }
+    }
+    #colabs{
+        .colabs-container{
+            .companies{
+                height: 215px;
+            }
+        }
+    }
+    #contact{
+        .contact-container{
+            .contact-info{
+                .contact-class{
+                    .contact-icon{
+                        i{
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+            .contact-form{
+                input[type="submit"]{
+                    font-size: 12px;
+                }
+                input, textarea{
+                    font-size: 12px;
+                }
+                label{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    #footer{
+        .foot{
+            p{
+                font-size: 14px;
+            }
+            i{
+                font-size: 28px;
+            }
+        }
+    }
+}

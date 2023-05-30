@@ -1,0 +1,911 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+}
+
+body a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: Pacifico;
+  src: url(../fonts/Pacifico-Regular.ttf) format(truetype);
+}
+@font-face {
+  font-family: Roboto Slab;
+  src: url(../fonts/RobotoSlab-Regular.ttf) format(truetype);
+}
+#header {
+  width: 100%;
+  background-color: #27374D;
+}
+#header .logo {
+  width: 100%;
+  height: 300px;
+  background-image: url("../images/banner.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#header .logo h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 60px;
+  text-shadow: 2px 2px 10px #26282a;
+}
+#header .logo a {
+  color: #dde6ed;
+  transition-duration: 0.2s;
+}
+#header .logo a:hover {
+  color: #f5441e;
+}
+#header .logo p {
+  padding-top: 10px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: "Roboto Slab", serif;
+  color: #dde6ed;
+  text-shadow: 2px 2px 10px #26282a;
+}
+#header .nav {
+  width: 100%;
+}
+#header .nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
+}
+#header .nav li {
+  list-style-type: none;
+  padding: 0px 20px;
+  border-right: 2px solid #526D82;
+}
+#header .nav li:last-child {
+  border-right: none;
+}
+#header .nav a {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: "Roboto Slab", serif;
+  color: #dde6ed;
+  text-shadow: 1px 1px 5px #26282a;
+}
+
+#about {
+  background-color: #526D82;
+}
+#about h1 {
+  font-size: 28px;
+  text-transform: none;
+  font-family: "Roboto Slab", serif;
+  color: #f5441e;
+  text-align: center;
+  font-family: "Pacifico", cursive;
+  text-shadow: 2px 2px 10px #26282a;
+}
+#about .about-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#about .about-container .me {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#about .about-container .me .me-picture {
+  width: 360px;
+  height: 360px;
+  border-radius: 20px;
+  box-shadow: 2px 4px 10px #26282a;
+  background-image: url("../images/me.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#about .about-container .about-me {
+  width: 35%;
+  background-color: #dde6ed;
+  padding: 0px 10px 10px 10px;
+  box-shadow: 2px 4px 10px #26282a;
+  border-radius: 20px;
+}
+#about .desc {
+  padding: 15px 0px;
+}
+#about .skills-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#about .skills-container .skill {
+  width: 20%;
+}
+#about .skills-container .skill .skill-desc {
+  width: 100%;
+  padding: 0px 10px 10px 10px;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#about .skills-container .skill .skill-desc span {
+  font-weight: bold;
+}
+#about .skills-container .skill .html, #about .skills-container .skill .css, #about .skills-container .skill .sass, #about .skills-container .skill .bootstrap {
+  width: 64px;
+  height: 64px;
+}
+#about .skills-container .skill .html {
+  background-image: url("../images/icons/html.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#about .skills-container .skill .css {
+  background-image: url("../images/icons/css.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#about .skills-container .skill .sass {
+  background-image: url("../images/icons/sass.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#about .skills-container .skill .bootstrap {
+  background-image: url("../images/icons/bootstrap.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#offers {
+  background-color: #27374D;
+}
+#offers h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: "Roboto Slab", serif;
+  color: #26282a;
+  text-align: center;
+  padding-bottom: 5px;
+}
+#offers .offers-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#offers .offers-container .offer {
+  width: 25%;
+}
+#offers .offers-container .offer .offer-desc {
+  width: 100%;
+  padding: 0px 10px 10px 10px;
+}
+#offers .offers-container .offer .offer-desc p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+#offers .offers-container .offer .responsive, #offers .offers-container .offer .maintenance, #offers .offers-container .offer .optimization {
+  width: 64px;
+  height: 64px;
+}
+#offers .offers-container .offer .responsive {
+  background-image: url("../images/icons/responsive.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#offers .offers-container .offer .maintenance {
+  background-image: url("../images/icons/maintenance.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#offers .offers-container .offer .optimization {
+  background-image: url("../images/icons/optimization.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#projects {
+  background-color: #526D82;
+}
+#projects .projects-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+#projects .projects-container .project {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  width: 47.5%;
+  height: 350px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  box-shadow: 2px 4px 10px #26282a;
+  transition: transform 0.2s ease;
+}
+#projects .projects-container .project:hover {
+  transform: scale(1.02);
+}
+#projects .projects-container .project .project-visit {
+  width: 85px;
+  height: 35px;
+  background-color: #27374D;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 2px 5px #26282a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#projects .projects-container .project .project-visit a {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: "Roboto Slab", serif;
+  color: #dde6ed;
+  text-shadow: 1px 1px 5px #26282a;
+}
+#projects .projects-container .project .project-desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background-color: rgba(221, 230, 237, 0.5);
+  border-radius: 0px 0px 20px 20px;
+}
+#projects .fast-rent {
+  background-image: url("../images/project1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#projects .portfolio {
+  background-image: url("../images/project2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#colabs {
+  background-color: #27374D;
+}
+#colabs .colabs-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#colabs .colabs-container .companies {
+  width: 47.5%;
+  height: 300px;
+  border-radius: 20px;
+  box-shadow: 2px 4px 10px #26282a;
+  background-color: #dde6ed;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+#colabs .colabs-container .companies:hover {
+  transform: scale(1.02);
+}
+#colabs .colabs-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+#colabs .colabs-container .overlay:hover {
+  opacity: 1;
+}
+#colabs .colabs-container .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+  height: 170px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(157, 178, 191, 0.85);
+  padding: 10px;
+  z-index: 1;
+  border-radius: 20px;
+}
+#colabs .colabs-container .carwiz {
+  background-image: url("../images/colab1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#colabs .colabs-container .budget {
+  background-image: url("../images/colab2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#contact {
+  background-color: #526D82;
+}
+#contact .contact-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 10px;
+}
+#contact .contact-container .contact-info {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#contact .contact-container .contact-info .contact-class {
+  width: 75%;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #27374D;
+  box-shadow: 2px 4px 10px #26282a;
+  margin: 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contact .contact-container .contact-info .contact-class .contact-icon {
+  width: 15%;
+}
+#contact .contact-container .contact-info .contact-class .contact-icon i {
+  font-size: 32px;
+  color: #dde6ed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contact .contact-container .contact-info .contact-class .contact-text {
+  width: 85%;
+}
+#contact .contact-container .contact-info .contact-class .contact-text p, #contact .contact-container .contact-info .contact-class .contact-text a {
+  color: #dde6ed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contact .contact-container .contact-form {
+  width: 40%;
+}
+#contact .contact-container .contact-form form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#contact .contact-container .contact-form textarea {
+  width: 75%;
+  height: 140px;
+  resize: none;
+  padding: 5px;
+}
+#contact .contact-container .contact-form input[type=text], #contact .contact-container .contact-form input[type=email] {
+  width: 75%;
+  height: 35px;
+  text-align: center;
+}
+#contact .contact-container .contact-form input[type=submit] {
+  width: 20%;
+  height: 35px;
+  margin-bottom: 0px;
+  background-color: #27374D;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: "Roboto Slab", serif;
+  color: #dde6ed;
+}
+#contact .contact-container .contact-form input, #contact .contact-container .contact-form textarea {
+  border-radius: 10px;
+  border: 1px solid #27374D;
+  background-color: #dde6ed;
+  box-shadow: 2px 4px 10px #26282a;
+  margin-bottom: 10px;
+  font-size: 16px;
+  text-transform: none;
+  font-family: "Roboto Slab", serif;
+  color: #191c20;
+}
+#contact .contact-container .contact-form label {
+  font-size: 16px;
+  text-transform: none;
+  font-family: "Roboto Slab", serif;
+  color: #191c20;
+}
+
+#footer {
+  height: 50px;
+  background-color: #27374D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#footer .foot {
+  display: flex;
+  width: 50%;
+}
+#footer .foot span {
+  color: #526D82;
+}
+#footer .foot a {
+  font-size: 40px;
+  color: #dde6ed;
+  transition-duration: 0.2s;
+  margin-left: 20px;
+}
+#footer .foot a:hover {
+  color: #f5441e;
+}
+#footer .foot a:first-child {
+  margin-left: 0px;
+}
+#footer .foot p {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: "Roboto Slab", serif;
+  color: #dde6ed;
+}
+#footer .foot:last-child {
+  justify-content: flex-end;
+}
+
+#about, #offers, #projects, #colabs, #contact, #footer {
+  width: 100%;
+  padding-left: 12%;
+  padding-right: 12%;
+}
+#about h2, #offers h2, #projects h2, #colabs h2, #contact h2, #footer h2 {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-family: "Roboto Slab", serif;
+  color: #dde6ed;
+  text-align: center;
+  text-shadow: 2px 2px 10px #26282a;
+  padding-bottom: 5px;
+}
+#about p, #offers p, #projects p, #colabs p, #contact p, #footer p {
+  text-align: center;
+  font-size: 16px;
+  text-transform: none;
+  font-family: "Roboto Slab", serif;
+  color: #191c20;
+}
+#about .skills-container, #about .offers-container, #offers .skills-container, #offers .offers-container, #projects .skills-container, #projects .offers-container, #colabs .skills-container, #colabs .offers-container, #contact .skills-container, #contact .offers-container, #footer .skills-container, #footer .offers-container {
+  width: 100%;
+}
+#about .skills-container .skill, #about .skills-container .offer, #about .offers-container .skill, #about .offers-container .offer, #offers .skills-container .skill, #offers .skills-container .offer, #offers .offers-container .skill, #offers .offers-container .offer, #projects .skills-container .skill, #projects .skills-container .offer, #projects .offers-container .skill, #projects .offers-container .offer, #colabs .skills-container .skill, #colabs .skills-container .offer, #colabs .offers-container .skill, #colabs .offers-container .offer, #contact .skills-container .skill, #contact .skills-container .offer, #contact .offers-container .skill, #contact .offers-container .offer, #footer .skills-container .skill, #footer .skills-container .offer, #footer .offers-container .skill, #footer .offers-container .offer {
+  background-color: #dde6ed;
+  border-radius: 20px;
+  box-shadow: 2px 4px 10px #26282a;
+  margin-bottom: 10px;
+}
+#about .skills-container .skill .skill-icon, #about .skills-container .offer .skill-icon, #about .offers-container .skill .skill-icon, #about .offers-container .offer .skill-icon, #offers .skills-container .skill .skill-icon, #offers .skills-container .offer .skill-icon, #offers .offers-container .skill .skill-icon, #offers .offers-container .offer .skill-icon, #projects .skills-container .skill .skill-icon, #projects .skills-container .offer .skill-icon, #projects .offers-container .skill .skill-icon, #projects .offers-container .offer .skill-icon, #colabs .skills-container .skill .skill-icon, #colabs .skills-container .offer .skill-icon, #colabs .offers-container .skill .skill-icon, #colabs .offers-container .offer .skill-icon, #contact .skills-container .skill .skill-icon, #contact .skills-container .offer .skill-icon, #contact .offers-container .skill .skill-icon, #contact .offers-container .offer .skill-icon, #footer .skills-container .skill .skill-icon, #footer .skills-container .offer .skill-icon, #footer .offers-container .skill .skill-icon, #footer .offers-container .offer .skill-icon {
+  width: 100%;
+  height: 64px;
+  margin: 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1441px) {
+  #header .logo h1 {
+    font-size: 54px;
+  }
+  #header .logo p {
+    font-size: 18px;
+  }
+  #header .nav a {
+    font-size: 18px;
+  }
+  #about, #offers, #projects, #colabs, #contact, #footer {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+  #about h2, #offers h2, #projects h2, #colabs h2, #contact h2, #footer h2 {
+    font-size: 27px;
+  }
+  #about p, #offers p, #projects p, #colabs p, #contact p, #footer p {
+    font-size: 14.4px;
+  }
+  #about h1 {
+    font-size: 25.2px;
+  }
+  #about .about-container .me .me-picture {
+    width: 324px;
+    height: 324px;
+  }
+  #offers h3 {
+    font-size: 18px;
+  }
+  #projects .projects-container .project .project-visit {
+    width: 76.5px;
+    height: 31.5px;
+  }
+  #projects .projects-container .project .project-visit a {
+    font-size: 16.2px;
+  }
+  #projects .projects-container .project .project-desc {
+    height: 36px;
+  }
+  #contact .contact-container .contact-info .contact-class .contact-icon i {
+    font-size: 28.8px;
+  }
+  #contact .contact-container .contact-form input[type=submit] {
+    font-size: 14.4px;
+  }
+  #contact .contact-container .contact-form input, #contact .contact-container .contact-form textarea {
+    font-size: 14.4px;
+  }
+  #contact .contact-container .contact-form label {
+    font-size: 14.4px;
+  }
+  #footer .foot p {
+    font-size: 18px;
+  }
+  #footer .foot i {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 1180px) {
+  #about .about-container {
+    justify-content: space-around;
+  }
+  #offers h3 {
+    padding: 0px 35px;
+  }
+  #projects .projects-container {
+    flex-direction: column;
+  }
+  #projects .projects-container .project {
+    width: 100%;
+    height: 300px;
+  }
+  #colabs .colabs-container {
+    flex-direction: column;
+  }
+  #colabs .colabs-container .companies {
+    width: 100%;
+  }
+  #colabs .colabs-container .text {
+    height: 130px;
+  }
+  #contact .contact-container .contact-info {
+    width: 50%;
+  }
+  #contact .contact-container .contact-info .contact-class {
+    width: 90%;
+  }
+  #contact .contact-container .contact-form {
+    width: 50%;
+  }
+  #contact .contact-container .contact-form textarea, #contact .contact-container .contact-form input[type=text], #contact .contact-container .contact-form input[type=email] {
+    width: 90%;
+  }
+  #contact .contact-container .contact-form input[type=submit] {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 1025px) {
+  #about, #offers, #projects, #colabs, #contact, #footer {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+  #about .about-container .me .me-picture {
+    width: 308px;
+    height: 308px;
+  }
+  #footer .foot {
+    width: 70%;
+  }
+  #footer .foot:last-child {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 978px) {
+  #about .skills-container .skill .skill-icon {
+    height: 56px;
+    margin: 5px 0px;
+  }
+  #about .skills-container .skill .html, #about .skills-container .skill .css, #about .skills-container .skill .sass, #about .skills-container .skill .bootstrap {
+    width: 56px;
+    height: 56px;
+  }
+  #about .skills-container .skill .skill-desc {
+    height: 150px;
+    padding: 0px 5px 5px 5px;
+  }
+  #offers h3 {
+    padding: 0px;
+  }
+  #offers .offers-container {
+    flex-direction: column;
+  }
+  #offers .offers-container .offer {
+    width: 100%;
+  }
+  #offers .offers-container .offer .skill-icon {
+    height: 56px;
+    margin: 5px 0px;
+  }
+  #offers .offers-container .offer .responsive, #offers .offers-container .offer .maintenance, #offers .offers-container .offer .optimization {
+    width: 56px;
+    height: 56px;
+  }
+  #offers .offers-container .offer .offer-desc {
+    padding: 0px 5px 5px 5px;
+  }
+  #offers .offers-container .offer .offer-desc p {
+    height: 100px;
+  }
+}
+@media screen and (max-width: 903px) {
+  #about .about-container .me {
+    width: 45%;
+    justify-content: flex-start;
+  }
+  #about .about-container .me .me-picture {
+    width: 276px;
+    height: 276px;
+  }
+  #about .about-container .about-me {
+    width: 50%;
+  }
+  #about .desc {
+    padding: 7.5px 0px;
+  }
+  #about .skills-container .skill {
+    width: 22.5%;
+  }
+}
+@media screen and (max-width: 749px) {
+  #about, #offers, #projects, #colabs, #contact, #footer {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  #about .skills-container .skill, #offers .skills-container .skill, #projects .skills-container .skill, #colabs .skills-container .skill, #contact .skills-container .skill, #footer .skills-container .skill {
+    width: 23%;
+  }
+  #about .skills-container .skill .skill-desc, #offers .skills-container .skill .skill-desc, #projects .skills-container .skill .skill-desc, #colabs .skills-container .skill .skill-desc, #contact .skills-container .skill .skill-desc, #footer .skills-container .skill .skill-desc {
+    height: 180px;
+  }
+  #about .about-container {
+    justify-content: space-between;
+  }
+  #contact .contact-container {
+    flex-direction: column;
+  }
+  #contact .contact-container .contact-info {
+    width: 75%;
+  }
+  #contact .contact-container .contact-info .contact-class {
+    width: 100%;
+  }
+  #contact .contact-container .contact-form {
+    width: 75%;
+  }
+  #contact .contact-container .contact-form textarea, #contact .contact-container .contact-form input[type=text], #contact .contact-container .contact-form input[type=email] {
+    width: 100%;
+  }
+  #footer {
+    height: 70px;
+    flex-direction: column-reverse;
+  }
+  #footer .foot {
+    width: 100%;
+    justify-content: center;
+  }
+  #footer .foot:last-child {
+    justify-content: center;
+    padding-bottom: 5px;
+  }
+}
+@media screen and (max-width: 636px) {
+  #header .logo {
+    height: 250px;
+  }
+  #header .logo h1 {
+    font-size: 48px;
+  }
+  #header .logo p {
+    font-size: 16px;
+  }
+  #header .nav ul {
+    flex-direction: column;
+    padding: 0px;
+  }
+  #header .nav li {
+    border: none;
+    padding: 5px 0px;
+  }
+  #header .nav a {
+    font-size: 16px;
+  }
+  #about h2, #offers h2, #projects h2, #colabs h2, #contact h2 {
+    font-size: 24px;
+  }
+  #about p, #offers p, #projects p, #colabs p, #contact p {
+    font-size: 12.8px;
+  }
+  #about h1 {
+    font-size: 22.4px;
+  }
+  #about .about-container {
+    flex-direction: column;
+  }
+  #about .about-container .me {
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 5px;
+  }
+  #about .about-container .me .me-picture {
+    width: 260px;
+    height: 260px;
+  }
+  #about .about-container .about-me {
+    width: 100%;
+  }
+  #about .desc {
+    padding: 5px 0px;
+  }
+  #about .skills-container {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #about .skills-container .skill {
+    width: 45%;
+  }
+  #about .skills-container .skill .skill-desc {
+    height: 120px;
+  }
+  #offers h3 {
+    font-size: 16px;
+  }
+  #projects .projects-container .project {
+    height: 250px;
+  }
+  #projects .projects-container .project .project-visit {
+    width: 68px;
+    height: 28px;
+  }
+  #projects .projects-container .project .project-visit a {
+    font-size: 14.4px;
+  }
+  #projects .projects-container .project .project-desc {
+    height: 32px;
+  }
+  #colabs .colabs-container .companies {
+    height: 250px;
+  }
+  #contact .contact-container .contact-info .contact-class {
+    height: 35px;
+  }
+  #contact .contact-container .contact-info .contact-class .contact-icon i {
+    font-size: 25.6px;
+  }
+  #contact .contact-container .contact-form input[type=submit] {
+    font-size: 12.8px;
+  }
+  #contact .contact-container .contact-form input, #contact .contact-container .contact-form textarea {
+    font-size: 12.8px;
+  }
+  #contact .contact-container .contact-form label {
+    font-size: 12.8px;
+  }
+  #footer .foot p {
+    font-size: 16px;
+  }
+  #footer .foot i {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 481px) {
+  #colabs .colabs-container .text {
+    width: 85%;
+    height: 150px;
+  }
+  #contact .contact-container .contact-info {
+    width: 100%;
+  }
+  #contact .contact-container .contact-info .contact-class {
+    width: 100%;
+  }
+  #contact .contact-container .contact-form {
+    width: 100%;
+  }
+  #contact .contact-container .contact-form textarea, #contact .contact-container .contact-form input[type=text], #contact .contact-container .contact-form input[type=email] {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 361px) {
+  #header .logo h1 {
+    font-size: 42px;
+  }
+  #header .logo p {
+    font-size: 15px;
+  }
+  #header .nav a {
+    font-size: 15px;
+  }
+  #about h2, #offers h2, #projects h2, #colabs h2, #contact h2 {
+    font-size: 22.5px;
+  }
+  #about p, #offers p, #projects p, #colabs p, #contact p {
+    font-size: 12px;
+  }
+  #about h1 {
+    font-size: 21px;
+  }
+  #about .skills-container .skill .skill-desc {
+    height: 130px;
+  }
+  #offers h3 {
+    font-size: 15px;
+  }
+  #projects .projects-container .project {
+    height: 215px;
+  }
+  #projects .projects-container .project .project-visit {
+    width: 63.75px;
+    height: 26.25px;
+  }
+  #projects .projects-container .project .project-visit a {
+    font-size: 13.5px;
+  }
+  #projects .projects-container .project .project-desc {
+    height: 30px;
+  }
+  #colabs .colabs-container .companies {
+    height: 215px;
+  }
+  #contact .contact-container .contact-info .contact-class .contact-icon i {
+    font-size: 24px;
+  }
+  #contact .contact-container .contact-form input[type=submit] {
+    font-size: 12px;
+  }
+  #contact .contact-container .contact-form input, #contact .contact-container .contact-form textarea {
+    font-size: 12px;
+  }
+  #contact .contact-container .contact-form label {
+    font-size: 12px;
+  }
+  #footer .foot p {
+    font-size: 14px;
+  }
+  #footer .foot i {
+    font-size: 28px;
+  }
+}/*# sourceMappingURL=style.css.map */
